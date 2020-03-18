@@ -1,0 +1,25 @@
+{
+  "name": "covid19-case-api",
+  "version": "1.0.0",
+  "description": "COVID-19 cases api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrAugu/covid19-case-api.git"
+  },
+  "keywords": [],
+  "author": "MrAugu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrAugu/covid19-case-api/issues"
+  },
+  "homepage": "https://github.com/MrAugu/covid19-case-api#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1"
+  }
+}
