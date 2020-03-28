@@ -92,7 +92,7 @@ const updateCountries = async () => {
         }
         // get deaths
         if (i % totalColumns === deathsColIndex) {
-            let deaths = cell.children.length != 0 ? cell.children[0].data : "";
+            let deaths = cell.children[0] ? cell.children[0].data : "";
             result[result.length - 1].deaths = parseInt(
                 deaths.trim().replace(/,/g, "") || "0",
                 10
