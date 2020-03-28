@@ -77,6 +77,7 @@ const updateCountries = async () => {
         // get cases
         if (i % totalColumns === casesColIndex) {
             let cases = cell.children.length != 0 ? cell.children[0].data : "";
+            console.log(result)
             result[result.length - 1].cases = parseInt(
                 cases.trim().replace(/,/g, "") || "0",
                 10
