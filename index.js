@@ -73,6 +73,7 @@ const updateCountries = async () => {
     const deathsPerOneMillionColIndex = 9;
     // minus totalColumns to skip last row, which is total
     for (let i = 0; i < countriesTableCells.length - totalColumns; i += 1) {
+        result.push({})
         const cell = countriesTableCells[i];
         // get cases
         if (i % totalColumns === casesColIndex) {
