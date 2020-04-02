@@ -64,7 +64,7 @@ const updateCountries = async () => {
       .children("tr")
       .children("td");
   // NOTE: this will change when table format change in website
-  const totalColumns = 11;
+  const totalColumns = 10;
   const countryColIndex = 0;
   const casesColIndex = 1;
   const todayCasesColIndex = 2;
@@ -75,7 +75,6 @@ const updateCountries = async () => {
   const criticalColIndex = 7;
   const casesPerOneMillionColIndex = 8;
   const deathsPerOneMillionColIndex = 9;
-  const firstCaseColIndex = 10;
 
   // minus totalColumns to skip last row, which is total
   for (let i = 0; i < countriesTableCells.length - totalColumns; i += 1) {
@@ -170,10 +169,6 @@ const updateCountries = async () => {
           result[result.length - 1].deathsPerOneMillion = parseFloat(
               deathsPerOneMillion.trim().replace(/,/g, "") || "0"
           );
-      }
-      if (i % totalColumns === firstCaseColIndex) {
-        let firstCaseDate = cell.children.length != 0 ? cell.children[0].data : "";
-        result[result.length - 1].firstCaseDate = firstCaseDate.trim();
       }
   }
 
