@@ -171,10 +171,6 @@ const updateCountries = async () => {
               deathsPerOneMillion.trim().replace(/,/g, "") || "0"
           );
       }
-      if (i % totalColumns === firstCaseColIndex) {
-        let firstCaseDate = cell.children.length != 0 ? cell.children[0].data : "";
-        result[result.length - 1].firstCaseDate = firstCaseDate.trim();
-      }
   }
 
   console.log("Updated The Countries. (" + (result.length) + ")");
